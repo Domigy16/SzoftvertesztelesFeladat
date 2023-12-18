@@ -24,15 +24,15 @@ namespace SzoftvertesztelesFeladat
                 Console.Write("Adjon meg egy számot!");
                 szam = Convert.ToDouble(Console.ReadLine());
             }
-            double kisszam = szamok[0];
+            double legnagyobb = szamok[0];
             foreach (var item in szamok)
             {
-                if (kisszam > item)
+                if (legnagyobb < item)
                 {
-                    kisszam=item;
+                    legnagyobb =item;
                 }
             }
-            Console.WriteLine($"A legkisebb szám: {kisszam}");
+            Console.WriteLine($"A legnagyobb szám: {legnagyobb}");
             Console.ReadKey();
         }
     }
